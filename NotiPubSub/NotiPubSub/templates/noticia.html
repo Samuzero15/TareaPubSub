@@ -1,0 +1,20 @@
+
+
+<div>
+    <h3>{{noticia.titulo}}</h3>
+    <p>
+        {{noticia.cuerpo}}
+    </p>    
+    <div>
+        {%if noticia.tags %}
+        <p>Tags:</p>
+        <ul>
+            {% for tag in noticica.tags %}
+            <li>{{tag}}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>añadele un tag</p>
+        {% endif %}
+    </div>
+</div>

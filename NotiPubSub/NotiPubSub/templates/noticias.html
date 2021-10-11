@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+
+{%block contenido%}
+    <h3>{%block titulo%} Feed de noticias {%endblock%}</h3>
+    {%if noticias%}
+        {% for noticia in noticias %}
+            {% include "noticia.html" with noticia=noticia %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
